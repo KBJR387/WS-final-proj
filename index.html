@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karlo Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *
+    {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+    body
+    {
+      font-family:'Inter',sans-serif;
+      background-image: url('https://w0.peakpx.com/wallpaper/344/81/HD-wallpaper-blue-pattern-color-colorfull-minimal-patter-sea.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color:#023047;
+      overflow-x:hidden;
+    }
+    a
+    {
+      text-decoration:none;
+      color:rgb(0, 0, 0);
+    }
+    nav
+    {
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:24px 8%;
+      position:fixed;
+      top:0;
+      backdrop-filter:blur(10px);
+      background:rgba(146, 146, 146, 0.4);
+      z-index:1000;
+    }
+    .logo
+    {
+      font-size:1.2rem;
+      font-weight:700;
+    }
+    .nav-links
+    {
+      display:flex;
+      gap:16px;
+    }
+    .nav-btn
+    {
+      padding:10px 18px;
+      border:1px solid rgba(0, 0, 0, 0.479);
+      border-radius:999px;
+      transition:0.3s ease;
+      font-size:0.95rem;
+    }
+    .nav-btn:hover
+    {
+      background:#219EBC;
+      color:#023047;
+      transform:translateY(-2px);
+    }
+    .hero
+    {
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:0 8%;
+    }
+    .hero-sub
+    {
+      color:#023047;
+      margin-bottom:20px;
+      font-size:1rem;
+    }
+    .hero h1
+    {
+      font-size:5rem;
+      line-height:1;
+      max-width:800px;
+      margin-bottom:30px;
+    }
+    .hero p
+    {
+      max-width:650px;
+      color:#023047;
+      line-height:1.7;
+      font-size:1.1rem;
+      margin-bottom:40px;
+    }
+    .hero-buttons
+    {
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .main-btn
+    {
+      padding:16px 28px;
+      border-radius:999px;
+      transition:0.3s ease;
+      font-weight:600;
+    }
+    .primary
+    {
+      background:#219EBC;
+      color:#023047;
+    }
+    .primary:hover
+    {
+      transform:scale(1.05);
+    }
+    .secondary
+    {
+      border:1px solid rgba(0, 0, 0, 0.185);
+    }
+    .secondary:hover
+    {
+      background:#219EBC;
+      color:black;
+    }
+    section
+    {
+      padding:120px 8%;
+    }
+    .section-title
+    {
+      font-size:2.5rem;
+      margin-bottom:50px;
+    }
+    .skills-grid
+    {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:24px;
+    }
+    .skill-card
+    {
+      background:#FFB703;
+      border:1px solid rgba(119, 119, 119, 0.521);
+      border-radius:24px;
+      padding:30px;
+      transition:0.35s ease;
+      cursor:pointer;
+    }
+    .skill-card:hover
+    {
+      transform:translateY(-10px);
+      border-color:rgb(71, 71, 71);
+    }
+    .skill-tag
+    {
+      display:inline-block;
+      padding:8px 14px;
+      background:#FB8500;
+      border-radius:999px;
+      font-size:0.8rem;
+      margin-bottom:20px;
+    }
+    .skill-card h3
+    {
+      font-size:1.5rem;
+      margin-bottom:14px;
+    }
+    .skill-card p
+    {
+      color:#023047;
+      line-height:1.6;
+    }
+    .about
+    {
+      max-width:800px;
+    }
+    .about p
+    {
+      color:#023047;
+      line-height:1.8;
+      font-size:1.1rem;
+    }
+    .contact-buttons
+    {
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
+    footer
+    {
+      padding:40px 8%;
+      color:#000000;
+      border-top:1px solid rgba(255,255,255,0.08);
+    }
+    .hidden
+    {
+      opacity:0;
+      transform:translateY(30px);
+      transition:all 0.8s ease;
+    }
+    .show
+    {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media(max-width:768px)
+    {
+      .hero h1
+      {
+        font-size:3rem;
+      }
+      nav
+      {
+        flex-direction:column;
+        gap:18px;
+      }
+      .nav-links
+      {
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Karlo Baldo</div>
+    <div class="nav-links">
+      <a href="#skills" class="nav-btn">Skills</a>
+      <a href="#about" class="nav-btn">About</a>
+      <a href="#contact" class="nav-btn">Contact</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hidden">
+      <div class="hero-sub">BS Information Technology • Designer • Creator</div>
+      <h1>
+        Hey! 
+      </h1>
+      <p>
+        My name is Karlo, and I'm a passionate multimedia creator who spends a lot of time making personal projects for the fun of it. At the time I enjoy the learning process of using multiple media creation apps like DaVinci Resolve, Audacity, and Canva.
+      </p>
+      <div class="hero-buttons">
+        <a href="#skills" class="main-btn primary">
+          View Skills
+        </a>
+        <a href="#contact" class="main-btn secondary">
+          Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="skills">
+    <h2 class="section-title hidden">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card hidden">
+        <div class="skill-tag">DaVinci • Pr • Filmora</div>
+        <h3>Video Editing</h3>
+        <p>
+          Focused on clean transitions, color grading, and dynamic storytelling to create engaging video content.
+        </p>
+      </div>
+      <div class="skill-card hidden">
+        <div class="skill-tag">Audacity • Bandlab</div>
+        <h3>Audio Production</h3>
+        <p>
+          Skilled in audio editing, mixing, and mastering to produce high-quality sound for various media projects.
+        </p>
+      </div>
+      <div class="skill-card hidden">
+        <div class="skill-tag">Canva • Photoshop</div>
+        <h3>Graphic Design</h3>
+        <p>
+          Creating compelling visual assets for digital and print media, with a focus on brand identity and user experience.
+        </p>
+      </div>
+    </div>
+
+  </section>
+  <section id="about">
+    <div class="about hidden">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        The majority of my time praciticing the skills I've listed were all just for fun, and I never really thought of it as a potential career path until recently. I started with video editing, creating content for my YouTube channel and social media platforms. As I delved deeper into the world of digital media, I discovered a passion for audio production and graphic design, which led me to explore various tools and techniques in those fields as well. My latest pursuit was online live-streaming on Facebook Live, and I was able to accumulate quite the audience before I dedided to take a break from it. I enjoy the creative process and the ability to bring ideas to life through different mediums, and I'm always eager to learn and grow in my craft.
+      </p>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="hidden">
+      <h2 class="section-title">Got any burning questions?</h2>
+      <p style="color:#023047; max-width:600px; line-height:1.7;">
+        If you ever have any questions, want to collaborate on a project, or just want to say hi, feel free to reach out! I'm always open to new opportunities and connections.
+      </p>
+      <div class="contact-buttons">
+        <a href="mailto:kaybaldojr@gmail.com" class="main-btn primary">
+          Email
+        </a>
+        <a href="https://github.com/KBJR387" class="main-btn secondary">
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Karlo Baldo. All rights reserved.
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries)=>
+    {
+      entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el)=>observer.observe(el));
+  </script>
+</body>
+</html>
